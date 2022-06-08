@@ -1,71 +1,76 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/101875083/172724696-1db1188b-132d-455a-8e3e-6158ca552abc.png)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+-Can pass props downwards - like a tree
+-Cannot pass props upwards to parents.
+-Props are read only, therefore cannot modify the prop in the child component, if we want to modify it, have to modify it in the top component first using state
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+What I have done in App.js is created a component called Product which will have 3 props = name, description, price.
+And what i have done in the Product.js is , first of all created a component called Product and passed props into the parameter and also passed the 3 props i created in the App.js
+Here 
+![image](https://user-images.githubusercontent.com/101875083/172724733-f7b92692-1cb1-4e39-bb9e-08630ec9a53f.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+With this now, i can use the one component and use it over and over again all over the application
+![image](https://user-images.githubusercontent.com/101875083/172724757-575b80e1-f134-43d9-8883-90f6453f0f4b.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+We can also object desctrucutre the object and grab the element directly and then rerender it
+![image](https://user-images.githubusercontent.com/101875083/172724782-387096f1-ae77-4739-a6ba-8f6e409d96bb.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+And now what we need to do now is create a sub component called ItemDescription and pass the props down to that one (remember tree structure can only pass down prop)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+Therefore I created a sub component called ItemDescription and i am only passing the name and the description since i want the name & the description to appear on the product
+![image](https://user-images.githubusercontent.com/101875083/172724803-178bf088-5d2f-4013-9282-ffaf14b4acf5.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# props
+
+
+
+
+Here i have passed the props into the ItemDescription component in the ItemDescription.js but havent passed the props in the Product.js
+![image](https://user-images.githubusercontent.com/101875083/172724826-c5ce2bb7-9208-42bd-a1c3-78e17c06e495.png)
+
+
+
+
+
+
+
+Passed the 1st prop into the 
+![image](https://user-images.githubusercontent.com/101875083/172724854-8bc63957-d526-4eef-afde-672747cd48ba.png)
+
+
+
+
+2nd prop passed from the 2nd component 
+![image](https://user-images.githubusercontent.com/101875083/172724881-2612bf6d-28ad-4c1f-a2ca-b41bde25b9f9.png)
+
+
+
+
+The price prop was not used in the ItemDescription sub component, so we just called it like this
+![image](https://user-images.githubusercontent.com/101875083/172724895-af08027f-c38b-4cbd-a2fc-7dbd4cc0149c.png)
+
+
